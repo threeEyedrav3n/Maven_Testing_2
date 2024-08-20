@@ -42,8 +42,8 @@ jobs:
         id: sast
         run: |
           RESPONSE=$(curl -X POST \
-            -H "Client-ID: ${{ secrets.INTRUCEPT_CLIENT_ID }}" \
-            -H "Client-Secret: ${{ secrets.INTRUCEPT_CLIENT_SECRET }}" \
+            -H "Client-ID: ${{ secrets.SAST_CLIENT_ID }}" \
+            -H "Client-Secret: ${{ secrets.SAST_CLIENT_SECRET }}" \
             -F "projectZipFile=@project.zip" \
             -F "applicationId=${{ secrets.INTRUCEPT_APPLICATION_ID }}" \
             -F "scanName=New Scan from GitHub Actions" \
